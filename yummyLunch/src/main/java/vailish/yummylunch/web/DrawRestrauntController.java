@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DrawRestrauntController {
 	@GetMapping
-	static void drawRestrauntMain(){
+	public void drawRestrauntMain(){
 		return;
 	}
 	
 	@GetMapping("/draw")
-	static void drawRestraunt(){
+	public void drawRestraunt(){
 		return;
 	}
 	
 	@PostMapping("/draw")
-	static void chooseDrawRestraunt(){
+	public void chooseDrawRestraunt(){
 		return;
 	}
 }
