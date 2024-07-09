@@ -135,6 +135,11 @@
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/ojdbc-14.jar</systemPath>
         </dependency>
         -->
+        <dependency>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		    <version>2.2.5</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.eclipse</groupId>
