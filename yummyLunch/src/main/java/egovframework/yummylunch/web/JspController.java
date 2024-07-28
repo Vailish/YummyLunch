@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class JspController {
 
 	@RequestMapping("/cnn")
-	public String jsp() {
+	public String jspTest() {
 		System.out.println("jsp request is arrived");
-		return "yummylunch/test";
+		return "test";
 	}
 
 }
