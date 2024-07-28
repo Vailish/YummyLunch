@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper	namespace="egovframework.sqlmap.vailish.mappers.restraunt-mapper">
+	
+	<select id="selectRestraunt">
+
+	</select>
+	
+	<insert id="insertRestraunt" parameterType="restaurantVO">
+	  INSERT INTO RESTAURANT (
+		      RESTAURANT_NAME,
+		      RESTAURANT_ETC,
+		      CREATED_AT,
+		      UPDATED_AT
+	          ) VALUE (
+	          #{restaurantName},
+	          #{restaurantEtc},
+	          NOW(),
+	          NOW()
+	          );
+	</insert>
+	
+	<update id="updateRestraunt">
+	</update>
+	
+	<delete id="deleteRestraunt">
+	</delete>
+	
+	<select id="selectRestrauntList" resultType="restaurantVO">
+       SELECT
+		      RESTAURANT_ID,
+		      RESTAURANT_NAME,
+		      RESTAURANT_ETC,
+		      CREATED_AT,
+		      UPDATED_AT
+		 FROM RESTAURANT
+	</select>
+	
+</mapper>

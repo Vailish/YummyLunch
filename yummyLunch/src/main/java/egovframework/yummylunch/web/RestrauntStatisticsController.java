@@ -1,14 +1,14 @@
-package vailish.yummylunch.web;
+package egovframework.yummylunch.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/history")
+@RequestMapping("/statistic")
 @Controller
-public class RestrauntHistoryController {
+public class RestrauntStatisticsController {
 	@GetMapping
-	public void getHistoryList() {
+	public void getStatisticList() {
 		return;
 	}
 }

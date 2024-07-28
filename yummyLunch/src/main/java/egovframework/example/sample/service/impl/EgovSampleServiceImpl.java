@@ -47,7 +47,7 @@ import org.springframework.stereotype.Service;
  *  Copyright (C) by MOPAS All right reserved.
  */
 
-@Service("sampleService")
+//@Service("sampleService")
 public class EgovSampleServiceImpl extends EgovAbstractServiceImpl implements EgovSampleService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EgovSampleServiceImpl.class);

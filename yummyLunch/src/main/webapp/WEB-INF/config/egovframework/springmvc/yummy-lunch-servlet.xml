@@ -7,11 +7,7 @@
                 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
                 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
-<<<<<<< HEAD
-    <context:component-scan base-package="vailish, egovframework">
-=======
     <context:component-scan base-package="egovframework">
->>>>>>> 834631c4e7720a179e175f7aea41e73a3fbb4044
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
@@ -50,11 +46,7 @@
 
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver" p:order="1"
 	    p:viewClass="org.springframework.web.servlet.view.JstlView"
-<<<<<<< HEAD
 	    p:prefix="/WEB-INF/jsp/yummylunch/" p:suffix=".jsp"/>
-=======
-	    p:prefix="/WEB-INF/jsp/egovframework/example/" p:suffix=".jsp"/>
->>>>>>> 834631c4e7720a179e175f7aea41e73a3fbb4044
 
     <!-- For Pagination Tag -->
     <bean id="imageRenderer" class="egovframework.example.cmmn.web.EgovImgPaginationRenderer"/>
