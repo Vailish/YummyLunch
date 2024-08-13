@@ -1,4 +1,4 @@
-package egovframework.yummylunch.web;
+package egovframework.yummylunch.restrauntInfo.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;

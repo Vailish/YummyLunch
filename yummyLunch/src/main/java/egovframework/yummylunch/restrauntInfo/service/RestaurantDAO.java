@@ -1,4 +1,4 @@
-package egovframework.yummylunch.service;
+package egovframework.yummylunch.restrauntInfo.service;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Repository;
 public class RestaurantDAO extends EgovAbstractMapper {
 	
 	public List<RestaurantVO> selectRestrauntList() throws SQLException {
-		return selectList("selectRestrauntList");
+		return selectList("RestaurantDAO.selectRestrauntList");
 	}
 	
 	public int insertRestraunt(String ㅇㅅㅇ) throws SQLException, IOException{
-		return insert(null, ㅇㅅㅇ);
+		return insert("RestaurantDAO.insertRestraunt", ㅇㅅㅇ);
 	}
 }

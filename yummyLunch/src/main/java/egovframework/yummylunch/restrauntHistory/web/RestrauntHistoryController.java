@@ -1,4 +1,4 @@
-package egovframework.yummylunch.web;
+package egovframework.yummylunch.restrauntHistory.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

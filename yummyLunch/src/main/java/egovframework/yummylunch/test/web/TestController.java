@@ -1,4 +1,4 @@
-package egovframework.yummylunch.web;
+package egovframework.yummylunch.test.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

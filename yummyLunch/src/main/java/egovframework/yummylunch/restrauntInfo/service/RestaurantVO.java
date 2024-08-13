@@ -1,4 +1,4 @@
-package egovframework.yummylunch.service;
+package egovframework.yummylunch.restrauntInfo.service;
 
 public class RestaurantVO {
 	private String restaurantId;
