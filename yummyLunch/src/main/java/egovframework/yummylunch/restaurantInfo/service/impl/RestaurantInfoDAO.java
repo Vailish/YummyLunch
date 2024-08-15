@@ -14,8 +14,9 @@ public class RestaurantInfoDAO extends EgovAbstractMapper {
 	
 	public List<RestaurantInfoVO> selectRestaurantList() throws SQLException {
 		System.out.println("ㅇㅅㅇ");
-		System.out.println(this.getClass() + " in");
-		return selectList("RestaurantDAO.selectRestaurantList");
+		List<RestaurantInfoVO> tmp= selectList("RestaurantDAO.selectRestaurantList");
+		System.out.println(tmp);
+		return tmp;
 	}
 	
 	public int insertRestaurant(RestaurantInfoVO restaurantVO) throws SQLException, IOException{

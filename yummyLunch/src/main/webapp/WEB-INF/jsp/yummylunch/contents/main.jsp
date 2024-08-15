@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>main</title>
+<title>YummyLunch</title>
+<link rel="stylesheet" href="/css/egovframework/sample.css">
 </head>
 <body>
 안녕하슈

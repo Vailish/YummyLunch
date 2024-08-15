@@ -1,6 +1,7 @@
 package egovframework.yummylunch.restaurantInfo.web;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoService;
+import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO;
 
 @RequestMapping("/restaurant")
 @Controller
@@ -26,7 +28,8 @@ public class RestaurantInfoController {
 	@GetMapping
 	public String getRestaurantList(ModelMap model) throws SQLException {
 		System.out.println("getRestaurantList 요청들어옴");
-		model.addAttribute("restaurantList", restaurantInfoService.selectRestaurantList());
+		List<RestaurantInfoVO> lst = restaurantInfoService.selectRestaurantList();
+		model.addAttribute("restaurantList", lst);
 		System.out.println("요청완료");
 		return "contents/restaurantList";
 	}

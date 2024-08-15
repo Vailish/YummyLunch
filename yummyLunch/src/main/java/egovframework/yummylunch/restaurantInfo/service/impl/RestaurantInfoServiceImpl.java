@@ -3,6 +3,8 @@ package egovframework.yummylunch.restaurantInfo.service.impl;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoService;
@@ -10,7 +12,8 @@ import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO;
 
 @Service
 public class RestaurantInfoServiceImpl implements RestaurantInfoService{
-
+	
+	@Resource
 	RestaurantInfoDAO restaurantInfoDAO;
 	
 	@Override
