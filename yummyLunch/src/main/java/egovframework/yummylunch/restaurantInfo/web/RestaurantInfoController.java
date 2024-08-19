@@ -27,10 +27,8 @@ public class RestaurantInfoController {
 
 	@GetMapping
 	public String getRestaurantList(ModelMap model) throws SQLException {
-		System.out.println("getRestaurantList 요청들어옴");
 		List<RestaurantInfoVO> lst = restaurantInfoService.selectRestaurantList();
 		model.addAttribute("restaurantList", lst);
-		System.out.println("요청완료");
 		return "contents/restaurantList";
 	}
 
@@ -40,13 +38,15 @@ public class RestaurantInfoController {
 	}
 
 	@GetMapping("/insert")
-	public void insertRestaurantPage() {
-		return;
+	public String insertRestaurantPage() {
+		System.out.println("insertRestaurantPage 요청");
+		return "contents/insertRestaurant";
 	}
 
-	@PostMapping
-	public void insertRestaurant() {
-		return;
+	@PostMapping("/insert")
+	public String insertRestaurant() {
+		System.out.println("insert 요청 들어옴");
+		return "contents/restaurantList";
 	}
 
 	@GetMapping("update")

@@ -6,25 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>YummyLunch</title>
-<link rel="stylesheet" href="/css/yummyLunch/basic.css">
-<style>
-.flex-container {
-    display: flex; /* Flex 컨테이너로 설정 */
-    justify-content: space-around; /* 아이템 사이의 공간을 균등하게 분배 */
-    align-items: center; /* 아이템들을 수직으로 중앙 정렬 */
-}
-.flex-item-title {
-    padding: 10px;
-    text-align: center;
-    flex: 1; /* Flex 아이템의 크기를 균등하게 설정 */
-    font-weight: bold;
-}
-.flex-item {
-    padding: 10px;
-    text-align: center;
-    flex: 1; /* Flex 아이템의 크기를 균등하게 설정 */
-}
-</style>
+<link rel="stylesheet" href="<c:url value='/css/basic.css'/>">
+<%-- <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/basic.css"> --%>
 </head>
 <body>
 <div class="flex-container">

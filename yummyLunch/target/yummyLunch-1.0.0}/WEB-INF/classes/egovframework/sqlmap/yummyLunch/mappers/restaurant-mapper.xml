@@ -32,14 +32,16 @@
 	<delete id="deleteRestaurant">
 	</delete>
 	
-	<select id="selectRestaurantList" resultType="restaurantInfoVO">
-       SELECT
-		      RESTAURANT_ID,
-		      RESTAURANT_NAME,
-		      RESTAURANT_ETC,
-		      CREATED_AT,
-		      UPDATED_AT
-		 FROM RESTAURANT
+	<select id="selectRestaurantList" resultType="restaurantListVO">
+		SELECT
+				R.RESTAURANT_NAME AS RESTAURANT_NAME,
+				M.MENU_NAME AS MENU_NAME
+		  FROM
+			    RESTAURANT AS R
+			    INNER JOIN RESTAURANT_MENU AS RM ON R.RESTAURANT_ID = RM.RESTAURANT_ID
+			    INNER JOIN MENU AS M ON M.MENU_ID = RM.MENU_ID
+		 WHERE
+			    RM.IS_MAIN = TRUE;
 	</select>
 	
 </mapper>

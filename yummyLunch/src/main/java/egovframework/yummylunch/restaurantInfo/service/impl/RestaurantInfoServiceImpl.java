@@ -18,10 +18,7 @@ public class RestaurantInfoServiceImpl implements RestaurantInfoService{
 	
 	@Override
 	public List<RestaurantInfoVO> selectRestaurantList() throws SQLException {
-		System.out.println(this.getClass() + " in");
-		List<RestaurantInfoVO> restaurantInfoVOs = restaurantInfoDAO.selectRestaurantList();
-		System.out.println(this.getClass() + " out");
-		return restaurantInfoVOs;
+		return restaurantInfoDAO.selectRestaurantList();
 	}
 
 	@Override

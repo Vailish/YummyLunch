@@ -3,12 +3,14 @@ egovframework\yummylunch\test\web\TestController.class
 egovframework\yummylunch\restaurantHistory\web\RestaurantHistoryController.class
 egovframework\example\sample\service\EgovSampleService.class
 egovframework\yummylunch\restaurantDraw\web\DrawRestaurantController.class
+egovframework\yummylunch\restaurantInfo\service\RestaurantListVO.class
 egovframework\example\cmmn\web\EgovBindingInitializer.class
 egovframework\yummylunch\restaurantInfo\service\impl\RestaurantInfoServiceImpl.class
 egovframework\example\sample\web\EgovSampleController.class
 egovframework\example\sample\service\SampleVO.class
 egovframework\yummylunch\restaurantInfo\web\RestaurantInfoController.class
 egovframework\example\sample\service\impl\EgovSampleServiceImpl.class
+egovframework\yummylunch\main\web\YummyLunchController.class
 egovframework\example\cmmn\EgovSampleExcepHndlr.class
 egovframework\example\sample\service\SampleDefaultVO.class
 egovframework\yummylunch\restaurantStatistic\web\RestaurantStatisticsController.class

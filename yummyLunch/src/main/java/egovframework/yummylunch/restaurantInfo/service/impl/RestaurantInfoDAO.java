@@ -13,10 +13,7 @@ import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO;
 public class RestaurantInfoDAO extends EgovAbstractMapper {
 	
 	public List<RestaurantInfoVO> selectRestaurantList() throws SQLException {
-		System.out.println("ㅇㅅㅇ");
-		List<RestaurantInfoVO> tmp= selectList("RestaurantDAO.selectRestaurantList");
-		System.out.println(tmp);
-		return tmp;
+		return selectList("RestaurantDAO.selectRestaurantList");
 	}
 	
 	public int insertRestaurant(RestaurantInfoVO restaurantVO) throws SQLException, IOException{
