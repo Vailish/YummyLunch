@@ -12,7 +12,7 @@
 		 FROM RESTAURANT
 	</select>
 	
-	<insert id="insertRestaurant" parameterType="restaurantInfoVO">
+	<insert id="insertRestaurant" parameterType="restaurantInfoVO" useGeneratedKeys="true" keyProperty="restaurantId">
 	  INSERT INTO RESTAURANT (
 		      RESTAURANT_NAME,
 		      RESTAURANT_ETC,
@@ -23,6 +23,30 @@
 	          #{restaurantEtc},
 	          NOW(),
 	          NOW()
+	          );
+	</insert>
+	
+	<insert id="insertMenu" parameterType="restaurantInsertVO" useGeneratedKeys="true" keyProperty="menuId">
+	  INSERT INTO MENU (
+		      MENU_NAME,
+		      PRICE,
+		      MENU_ETC
+	          ) VALUE (
+	          #{menuName},
+	          #{price},
+	          #{menuEtc}
+	          );
+	</insert>
+	
+	<insert id="insertRestaurantMenu" parameterType="menuInsertVO">
+	  INSERT INTO RESTAURANT_MENU (
+		      IS_MAIN,
+		      RESTAURANT_ID,
+		      MENU_ID
+	          ) VALUE (
+	          #{isMain},
+	          #{restaurantId},
+	          #{menuId}
 	          );
 	</insert>
 	

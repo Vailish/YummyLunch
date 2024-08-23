@@ -13,5 +13,9 @@
 		
 		<typeAlias alias="restaurantInfoVO" type="egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO"/>
 		<typeAlias alias="restaurantListVO" type="egovframework.yummylunch.restaurantInfo.service.RestaurantListVO"/>
+		<typeAlias alias="menuInsertVO" type="egovframework.yummylunch.restaurantInfo.service.MenuInsertVO"/>
+		<typeAlias alias="restaurantInsertVO" type="egovframework.yummylunch.restaurantInfo.service.RestaurantInsertVO"/>
+		<typeAlias alias="restaurantMenuInsertVO" type="egovframework.yummylunch.restaurantInfo.service.RestaurantMenuInsertVO"/>
+		
     </typeAliases>
 </configuration>

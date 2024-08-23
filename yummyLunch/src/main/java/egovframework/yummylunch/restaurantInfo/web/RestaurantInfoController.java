@@ -1,5 +1,6 @@
 package egovframework.yummylunch.restaurantInfo.web;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -10,13 +11,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import egovframework.yummylunch.restaurantInfo.service.MenuInsertVO;
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoService;
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO;
+import egovframework.yummylunch.restaurantInfo.service.RestaurantInsertVO;
 
 @RequestMapping("/restaurant")
 @Controller
@@ -44,8 +49,21 @@ public class RestaurantInfoController {
 	}
 
 	@PostMapping("/insert")
-	public String insertRestaurant() {
+	public String insertRestaurant(@ModelAttribute RestaurantInsertVO restaurantInsertVO) throws SQLException, IOException {
 		System.out.println("insert 요청 들어옴");
+		System.out.println(
+				restaurantInsertVO.getRestaurantName()
+				);
+		for (MenuInsertVO menuInsertVO : restaurantInsertVO.getMenus()) {
+			System.out.println(menuInsertVO.getMenuName() + " " + menuInsertVO.getMenuPrice() + " " + menuInsertVO.getIsMain() + " " + menuInsertVO.getMenuEtc());
+		}
+		int result = restaurantInfoService.insertRestaurantMenu(restaurantInsertVO);
+		
+		if (result == 0) {
+			System.out.println("입력실패입니다.");
+		}
+		
+		
 		return "contents/restaurantList";
 	}
 

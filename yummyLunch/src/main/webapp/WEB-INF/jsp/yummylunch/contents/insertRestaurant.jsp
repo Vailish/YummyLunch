@@ -66,22 +66,26 @@
 		<div class="flex-container">
 			<div class="flex-item-title-left">대표메뉴</div>
 			<div class="flex-item-title">메뉴</div>
-			<div class="flex-item-title-right">가격</div>
+			<div class="flex-item-title">가격</div>
+			<div class="flex-item-title-right">비고</div>
 		</div>
 		<div class="flex-container">
 			<div class="flex-item-title-left">
-				<input type="radio" name="isMain">
+				<input type="radio" name="menus[0].isMain">
 			</div>
 			<div class="flex-item-title">
-				<input type="text" name="menuName">
+				<input type="text" name="menus[0].menuName">
+			</div>
+			<div class="flex-item-title">
+				<input type="text" name="menus[0].menuPrice">
 			</div>
 			<div class="flex-item-title-right">
-				<input type="text" name="menuPrice">
+				<input type="text" name="menus[0].menuEtc">
 			</div>
 		</div>
-		<div class="flex-container">
+		<div class="flex-container" id="add-menu">
 			<div class="flex-item-title-left"></div>
-			<div class="flex-item-title">메뉴추가하기</div>
+			<div class="flex-item-title" onclick="addMenu()">메뉴추가하기</div>
 			<div class="flex-item-title-right"></div>
 		</div>
 		<div class="flex-container-button">
@@ -91,5 +95,11 @@
 		</div>
 	</form>
 </div>
+<script>
+function addMenu() {
+	console.log("ㅇㅅㅇ");
+}
+
+</script>
 </body>
 </html>

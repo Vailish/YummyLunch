@@ -1,7 +1,6 @@
 package egovframework.yummylunch.restaurantInfo.service;
 
 public class RestaurantListVO {
-	
 	private String restaurantName;
 	private String menuName;
 
