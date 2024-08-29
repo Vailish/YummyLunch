@@ -70,7 +70,8 @@ public class RestaurantInfoServiceImpl implements RestaurantInfoService{
 		result.setNumberOfMenu(resultMenu);
 		result.setNumberOfRestaurantMenu(resultTable);
 		
-		// 관계 넣어줘야함
+		System.out.println("resultMenu : " + resultMenu);
+		System.out.println(result.toString());
 		return result;
 	}
 

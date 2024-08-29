@@ -23,4 +23,9 @@ public class RestaurantMenuInsertResultVO {
 	public void setNumberOfRestaurantMenu(int numberOfRestaurantMenu) {
 		this.numberOfRestaurantMenu = numberOfRestaurantMenu;
 	}
+	
+	public boolean chkResult() {
+		if (numberOfRestaurant == 1 && numberOfRestaurantMenu > 0 && numberOfMenu == numberOfRestaurantMenu) return true;
+		return false;
+	}
 }

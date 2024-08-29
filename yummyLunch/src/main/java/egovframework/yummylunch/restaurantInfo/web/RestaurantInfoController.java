@@ -22,6 +22,7 @@ import egovframework.yummylunch.restaurantInfo.service.MenuInsertVO;
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoService;
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInfoVO;
 import egovframework.yummylunch.restaurantInfo.service.RestaurantInsertVO;
+import egovframework.yummylunch.restaurantInfo.service.RestaurantMenuInsertResultVO;
 
 @RequestMapping("/restaurant")
 @Controller
@@ -57,10 +58,11 @@ public class RestaurantInfoController {
 		for (MenuInsertVO menuInsertVO : restaurantInsertVO.getMenus()) {
 			System.out.println(menuInsertVO.getMenuName() + " " + menuInsertVO.getMenuPrice() + " " + menuInsertVO.getIsMain() + " " + menuInsertVO.getMenuEtc());
 		}
-		int result = restaurantInfoService.insertRestaurantMenu(restaurantInsertVO);
+		RestaurantMenuInsertResultVO result = restaurantInfoService.insertRestaurantMenu(restaurantInsertVO);
 		
-		if (result == 0) {
+		if (result.chkResult()==false) {
 			System.out.println("입력실패입니다.");
+			return null;
 		}
 		
 		
